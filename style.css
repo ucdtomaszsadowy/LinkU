@@ -50,12 +50,39 @@ a{
 }
 
 .navibar-middle ul li a img{
-    width: 30px;
+    width: 25px;
+    display: inline-block;
+    margin-left: 3px;
 }
 
+.navibar-middle ul li a{
+    display:flex;
+    align-items:center;
+    margin:4px 9px;
+    padding-right: 5px;
+    position: relative;
+}
+
+.navibar-middle ul li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #5f5f5f;
+    position: absolute;
+    bottom: -14px;
+    transition: width 0.3s;
+}
+
+.navibar-middle ul li a:hover::after,
+.navibar-middle ul li a.active-link::after {
+    width: 100%;
+}
+
+
 .user-profiler{
-    width: 35px;
-    height:35px;
+    width: 40px;
+    height: 40px;
+    top: 2px;
     border-radius: 50%;
     border-color: black;
     display: inline-block;
@@ -75,7 +102,7 @@ a{
     border: 2px solid #fff;
     border-radius: 50%;
     right: 0px;
-    top: 0px;
+    top: 2px;
     background: #41db51;
     position: absolute;
 }
@@ -101,13 +128,185 @@ a{
     background: none;
     border: none;
     position: absolute;
-    left: 330px; /* adjust as needed */
+    left: 330px; 
     top: 50%;
     transform: translateY(-45%);
     cursor: pointer;
 }
 
 .search-btn img {
-    width: 15px; /* Adjust according to your preference */
-    height: 15px; /* Adjust according to your preference */
+    width: 15px; 
+    height: 15px; 
+}
+
+.container{
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-sidebar{
+    flex-basis: 25%;
+    align-self: flex-start;
+    margin-left: 135px;
+}
+.sidebar-profile-box{
+    background: #fff;
+    border-radius: 10px;
+}
+.sidebar-profile-box img{
+    border-radius: 10px;
+}
+
+.sidebar-profile-info{
+    padding: 0 25px;
+}
+.sidebar-profile-info img{
+    width: 70px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 4px;
+    margin-top: -45px;
+    margin-left: 35%;
+}
+
+.sidebar-profile-info h1{
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+}
+
+.sidebar-profile-info h3{
+    font-size: 14px;
+    font-weight: 500;
+    color: #5f5f5f;
+}
+
+.sidebar-profile-info ul{
+    list-style: none;
+    margin: 20px 0;
+}
+
+.sidebar-profile-info ul li{
+    width: 100%;
+    margin: 5px 0;
+    font-size: 13px;
+}
+
+.sidebar-profile-info ul li span{
+    float: right;
+    color: #045be6;
+}
+
+.sidebar-profile-link{
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ccc;
+}
+
+.sidebar-profile-link a{
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    font-size: 13px;
+    border-left: 1px solid #ccc;
+}
+
+.sidebar-profile-link a:first-child{
+    border-left: 0;
+}
+
+.sidebar-profile-link a img{
+    width: 20px;
+    margin-right: 10px;
+}
+
+.sidebar-activity{
+    background: #fff;
+    padding: 5px 25px;
+    margin: 12px 0;
+    border-radius: 10px;
+}
+
+.sidebar-activity h3{
+    color: #777;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 20px 0 10px;
+}
+
+.sidebar-activity a{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: #888;
+    margin: 3px 0;
+}
+
+.sidebar-activity a img{
+    width: 20px;
+    margin-right: 10px;
+}
+
+.discover-more-link{
+    border-top: 1px solid #ccc;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: -25px;
+    margin-right: -25px;
+}
+
+.discover-more-link a{
+    color: #045be6;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.right-sidebar{
+    flex-basis: 25%;
+    align-self: flex-start;
+}
+
+.sidebar-news{
+    background: #fff;
+    padding: 10px 25px;
+    border-radius: 10px;
+}
+
+.info-icon{
+    width: 15px;
+    float: right;
+    margin-top: 15px;
+}
+
+.sidebar-news h3{
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 10px 0 30px;
+}
+
+.sidebar-news a{
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: -5px;
+}
+
+.sidebar-news span{
+    font-size: 12px;
+}
+
+.sidebar-news .read-more-link{
+    color: #045be6;
+    font-weight: 500;
+    margin: 20px 0 10px;
+}
+
+.main-box{
+    flex-basis: 47%;
 }
