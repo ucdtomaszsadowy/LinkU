@@ -320,9 +320,9 @@ a{
 }
 
 .sidebar-ad img{
-    width: 60px;
-    border-radius: 50%;
+    width: 100%;
     margin: 4px;
+    cursor: pointer;
 }
 
 .sidebar-ad small{
@@ -402,7 +402,7 @@ a{
 }
 
 .create-post-input textarea{
-    width: 90px;
+    width: 450px;
     border: 0;
     outline: 0;
     resize: none;
